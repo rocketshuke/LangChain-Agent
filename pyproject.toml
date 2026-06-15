@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "langchain-agent"
+version = "1.0.0"
+description = "An intelligent agent system powered by LangChain with knowledge base management, multi-tool support, and web UI."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Your Name", email = "your.email@example.com" },
+]
+keywords = ["langchain", "agent", "rag", "knowledge-base", "fastapi", "gradio"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "langchain==1.3.9",
+    "langchain-classic==1.0.8",
+    "langchain-community==0.4.2",
+    "langchain-core==1.4.7",
+    "langchain-deepseek==1.1.0",
+    "langchain-openai==1.3.2",
+    "langchain-text-splitters==1.1.2",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "python-multipart>=0.0.5",
+    "python-dotenv>=1.0.0",
+    "sqlalchemy>=2.0.0",
+    "PyMuPDF>=1.23.0",
+    "python-docx>=1.0.0",
+    "pypdf>=3.0.0",
+    "faiss-cpu>=1.7.0",
+    "requests>=2.28.0",
+    "codeboxapi>=0.2.0",
+    "jieba>=0.42.0",
+    "matplotlib>=3.0.0",
+    "ipython>=8.0.0",
+    "gradio>=4.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/langchain-agent"
+Source = "https://github.com/yourusername/langchain-agent"
+Documentation = "https://github.com/yourusername/langchain-agent#readme"
+
+[project.scripts]
+langchain-agent = "app_server:app"
